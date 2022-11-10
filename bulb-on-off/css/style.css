@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.bulb-img {
+  width: 25rem;
+
+  display: none;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  min-width: 12rem;
+
+  border: 1px solid grey;
+  border-radius: 2rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:has(.btn--on.active) {
+  background-color: greenyellow;
+}
+
+.btn:has(.btn--off.active) {
+  background-color: rgb(223, 223, 223);
+}
+
+.btn-text {
+  display: none;
+}
+
+.active {
+  display: block;
+}
