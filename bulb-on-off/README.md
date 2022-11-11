@@ -8,3 +8,9 @@ As imagens abaixo são opcionais! Fique livre para utilizar outras imagens ou at
 - desligada - https://s3-sa-east-1.amazonaws.com/lcpi/a13955a2-2ea4-4cbb-b830-105b3b372c37.png
 
 Poste o link do seu repositório ou um arquivo zipado com seu código.
+
+# Solução
+
+Preview: https://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/bulb-on-off/index.html
+
+![bulb-on-off-gif](https://user-images.githubusercontent.com/98363297/201210464-cd9e60ab-bb5f-400c-ac55-db1a54907ddc.gif)
