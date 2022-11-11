@@ -3,4 +3,4 @@
 
 Preview: https://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/bulb-on-off/index.html
 
-![bulb-on-off-gif](https://user-images.githubusercontent.com/98363297/201210464-cd9e60ab-bb5f-400c-ac55-db1a54907ddc.gif)
+![bulb-on-off-gif](https://user-images.githubusercontent.com/98363297/201336924-b413b2ea-b81e-4dd7-ad68-c2835d17d6ec.gif)
