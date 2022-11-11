@@ -4,7 +4,11 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+body:has(.btn--on.active) {
+  background-color: rgb(226, 226, 226);
+}
+
+body:has(.btn--off.active) {
   background-color: aliceblue;
 }
 
