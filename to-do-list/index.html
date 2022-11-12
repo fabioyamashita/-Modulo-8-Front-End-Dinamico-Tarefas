@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fabio Yamashita" />
+    <meta name="description" content="Bulb ON-OFF exercise" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e651aa4165.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/script.js" defer></script>
+
+    <title>Bulb ON-OFF</title>
+  </head>
+  <body>
+    <main class="to-do-list-container">
+      <div class="heading">
+        <h1 class="heading-text">to-do list</h1>
+        <img
+          class="check-sign"
+          src="./img/check-mark.png"
+          alt="green check sign"
+        />
+      </div>
+
+      <section class="tasks-container">
+        <form class="to-do-form" name="add-to-do">
+          <input
+            type="text"
+            id="to-do-text"
+            placeholder="Enter your task here"
+            class="input-area"
+            name="to-do-text"
+          />
+          <button class="btn btn-submit" type="submit">
+            <i class="submit-icon fa-solid fa-plus"></i>
+          </button>
+        </form>
+
+        <ul class="to-do-list">
+          <p class="empty-list-text">Your to-do list will appear here :)</p>
+          <!-- <li class="to-do-item">
+            <div class="to-do-item-box">
+              <button class="btn btn-to-do btn-check">
+                <i class="list-icon list-icon-check fa-solid fa-check"></i>
+              </button>
+
+              <div class="to-do-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                molestiae natus architecto inventore hic sapiente, reiciendis
+                nobis aliquid suscipit, id dolorum impedit quidem aliquam?
+                Beatae, dolor. Odit ut neque vero?
+              </div>
+
+              <button class="btn btn-to-do btn-delete">
+                <i
+                  class="list-icon list-icon-delete fa-regular fa-trash-can"
+                ></i>
+              </button>
+            </div>
+          </li> -->
+        </ul>
+        <!-- <div class="clear-all hidden">
+          <p class="clear-all-text">You have x pending tasks</p>
+          <button class="clear-all-btn">CLEAR ALL</button>
+        </div> -->
+      </section>
+    </main>
+  </body>
+</html>
