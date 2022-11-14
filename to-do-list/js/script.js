@@ -4,7 +4,8 @@ const toDoListEl = document.querySelector(".to-do-list");
 const emptyListTextEl = document.querySelector(".empty-list-text");
 const taskContainerEl = document.querySelector(".tasks-container");
 
-let countItems = 0;
+let totalItems = 0;
+let pendingItems = 0;
 
 /////////////////////////////////////
 // ADD NEW TO-DO ITEM
@@ -22,7 +23,7 @@ form.addEventListener("submit", (e) => {
   addBtnDeleteEventListener();
   addBtnCheckEventListener();
 
-  increaseOneClearAllSection();
+  modifyUpClearAllSection();
 });
 
 /////////////////////////////////////
@@ -52,7 +53,7 @@ function createItemListComponent(toDoText) {
           <i class="list-icon list-icon-check fa-solid fa-check hidden"></i>
         </button>
 
-        <div class="to-do-text">${toDoText}</div>
+        <div class="to-do-text" contenteditable="true">${toDoText}</div>
 
         <button class="btn btn-to-do btn-delete">
           <i
@@ -63,12 +64,13 @@ function createItemListComponent(toDoText) {
     </li>`;
 
   toDoListEl.insertAdjacentHTML("beforeend", HTMLContent);
+  preventLineBreakContentEditable();
 }
 
 function createClearAllSectionComponent() {
   const HTMLContent = `
     <div class="clear-all">
-      <p class="clear-all-text">You have 1 task</p>
+      <p class="clear-all-text">You have 1 pending task</p>
       <button class="clear-all-btn">CLEAR ALL</button>
     </div>`;
 
@@ -93,10 +95,18 @@ function addBtnDeleteEventListener() {
   const lastBtnDeleteEl = getLastElementFromNodeList(".btn-delete");
 
   lastBtnDeleteEl.addEventListener("click", (e) => {
+    if (
+      !e.target
+        .closest(".btn-delete")
+        .previousElementSibling.classList.contains("done")
+    ) {
+      pendingItems--;
+    }
+
     e.target.closest(".to-do-item").remove();
 
     toggleEmptyListText();
-    decreaseOneClearAllSection();
+    modifyDownClearAllSection();
   });
 }
 
@@ -108,6 +118,14 @@ function addBtnCheckEventListener() {
   lastBtnCheckEl.addEventListener("click", (e) => {
     lastCheckIconEl.classList.toggle("hidden");
     lastToDoTextEl.classList.toggle("done");
+
+    if (lastToDoTextEl.classList.contains("done")) {
+      pendingItems--;
+    } else {
+      pendingItems++;
+    }
+
+    updateClearAllSection(pendingItems);
   });
 }
 
@@ -121,37 +139,62 @@ function addBtnClearAllEventListener() {
   });
 }
 
+// PREVENT LINE/PARAGRAPH BREAKS IN contentEditable
+function preventLineBreakContentEditable() {
+  const contentEditableEl = getLastElementFromNodeList(".to-do-text");
+  contentEditableEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.target.blur();
+    }
+  });
+}
+
 // CLEAR ALL SECTION (COUNT ITEMS IN TO-DO LIST)
 function updateClearAllSection(count) {
   const clearAllTextEl = document.querySelector(".clear-all-text");
-  clearAllTextEl.innerHTML = `You have ${count} tasks`;
+
+  switch (count) {
+    case 0:
+      clearAllTextEl.innerHTML = `You've completed all tasks!`;
+      break;
+    case 1:
+      clearAllTextEl.innerHTML = `You have ${count} pending task`;
+      break;
+    default:
+      clearAllTextEl.innerHTML = `You have ${count} pending tasks`;
+      break;
+  }
 }
 
 function removeClearAllSection() {
   const clearAllEl = document.querySelector(".clear-all");
   clearAllEl.remove();
-  countItems = 0;
+  totalItems = 0;
+  pendingItems = 0;
 }
 
-function increaseOneClearAllSection() {
+function modifyUpClearAllSection() {
   const toDoItemEl = document.querySelectorAll(".to-do-item");
 
   if (toDoItemEl.length > 0) {
-    if (toDoItemEl.length === 1 && countItems === 0) {
+    if (toDoItemEl.length === 1 && totalItems === 0) {
       createClearAllSectionComponent();
-      countItems++;
+      totalItems++;
+      pendingItems++;
     } else {
-      countItems++;
-      updateClearAllSection(countItems);
+      totalItems++;
+      pendingItems++;
+      updateClearAllSection(pendingItems);
     }
   }
 }
 
-function decreaseOneClearAllSection() {
-  countItems--;
-  if (countItems === 0) {
+function modifyDownClearAllSection() {
+  totalItems--;
+  if (totalItems === 0) {
     removeClearAllSection();
   } else {
-    updateClearAllSection(countItems);
+    updateClearAllSection(pendingItems);
   }
 }
