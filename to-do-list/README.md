@@ -10,7 +10,7 @@ Deverá ter:
 
 # Solução
 
-Preview: https://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/to-do-list/index.html
+Preview: https://todolist-project-fabioyamashita.netlify.app/
 
 https://user-images.githubusercontent.com/98363297/201690297-f153723a-6854-487e-bc3f-3804c90bf320.mp4
 
