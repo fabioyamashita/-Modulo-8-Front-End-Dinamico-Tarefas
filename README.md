@@ -10,3 +10,7 @@ Preview: https://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo
 Preview: https://todolist-project-fabioyamashita.netlify.app/
 
 https://user-images.githubusercontent.com/98363297/201690297-f153723a-6854-487e-bc3f-3804c90bf320.mp4
+
+# Exercício 3 - (clock - Entrega até 21/11/2022)
+
+Preview: ttps://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/clock/index.html
