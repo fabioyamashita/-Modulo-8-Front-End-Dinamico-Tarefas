@@ -13,4 +13,7 @@ https://user-images.githubusercontent.com/98363297/201690297-f153723a-6854-487e-
 
 # Exercício 3 - (clock - Entrega até 21/11/2022)
 
-Preview: ttps://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/clock/index.html
+Preview: https://htmlpreview.github.io/?https://github.com/fabioyamashita/Modulo-9-Front-End-Dinamico-Tarefas/blob/main/clock/index.html
+
+https://user-images.githubusercontent.com/98363297/202869059-c694f92c-f3a4-47c2-9dd3-679c5431e7bd.mp4
+
