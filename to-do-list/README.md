@@ -1,12 +1,10 @@
 # Exercício 2 - Entrega até 16/11/2022
 
-Criar um To-Do List.
+Crie uma aplicação que possua um input para entrada de afazeres que devem ser exibidos em formato de lista, a aplicação deve possuir um botão para limpar toda a lista.
 
-Deverá ter:
-- form com input
-- botão de adicionar
-- botão de excluir item
-- botão de excluir todos
+Extra - deletar afazer individualmente.
+
+Fique à vontade para personalizar como bem entender, como colocar um contador de afazeres, setar que o afazer está pronto, permitir inserção de data e hora para determinar se o afazer está atrasado ou não, entre outros.
 
 # Solução
 
